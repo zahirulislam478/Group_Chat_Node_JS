@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Us</title>
+    <!-- Fav-icon  -->
+    <link rel="icon" type="image/x-icon" href="uploads/eProduct-icon.png">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <link rel='stylesheet' href='styles/js-snackbar.css' />
+    <script src="scripts/js-snackbar.js"></script>
+    <script src="node_modules/socket.io/client-dist/socket.io.js"></script>
+    <script src="node_modules/socketio-file-upload/client.js"></script>
+    <!-- Font awesome link icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <script src="scripts/chat-js.js"></script>
+</head>
+
+<body>
+    <nav>
+            
+          
+          
+        <span class="brand">
+            Chat in rooms
+        </span>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            
+            <li><a href="ChatUs.html">Chat Us</a></li>
+        </ul>
+   
+</nav>
+    <div class="container main" style="padding: 0 10px;">
+        <div id="pconnect" style="display: none;">
+            <input placeholder="display name.." type="text" id="dname" class="text-grow" /><button type="button" id="connect" class="btn">Connect</button>
+        </div>
+        <div id="pchat" style="display: none;" class="my-2">
+            <div class="c-1">
+                <div class='list-header'>Users</div>
+                <ul class='list' id="users">
+
+                </ul>
+            </div>
+            <div class="c-2">
+                <div>
+                    <span id="hname"></span>
+                    <span id="gname"></span>
+                </div>
+                <div class="flex my-1">
+                    <select  type="text" id="groups" class="text-grow"></select><button type="button" id="join" class="btn">Join</button>
+                </div>
+                <div class="flex my-1">
+                    <input placeholder="group name..." type="text" id="group" class="text-grow" /><button type="button" id="create" class="btn">Create</button>
+                </div>
+                <div class="flex my-1">
+                    <input placeholder="message..." type="text" id="msg" class="text-grow" /><button type="button" id="send" class="btn">Post</button><button type="button" id="browse" class="btn">Browse</button>
+                </div>
+                <div id="drop" class="my-1">
+                    Upload your files
+                </div>
+                <div id="pmessages">
+                    <div class='list-header mt'>Send Message</div>
+                    <ul class='list' id="messages"></ul>
+                </div>
+                <div id="files" class="files"></div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; All right Reserved</p>
+    </footer>
+    <input type='file' id='fu' style='display:none;' />
+</body>
+
+</html>
